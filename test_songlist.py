@@ -12,7 +12,8 @@ assert len(song_list.songs) == 0
 song_list.load_songs('songs.csv')
 assert len(song_list.songs) > 0  # assuming CSV file is not empty
 print(song_list)
-
+#test get number of songs to learn
+print("Number of songs to learn = ", song_list.get_number_required())
 
 # TODO: add tests below to show the various required methods work as expected
 # test sorting songs
@@ -22,6 +23,6 @@ print(song_list)
 # test get_song()
 
 # test getting the number of required and learned songs (separately)
-print(song_list.get_number_learned())
+print("Number of songs learnt = ", song_list.get_number_learned())
 # test saving songs (check CSV file manually to see results)
 song_list.save_songs("songs.csv")

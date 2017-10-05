@@ -18,7 +18,11 @@ class SongList(Song):
         self.songs.append(a_song)
 
     def get_number_required(self):
-        pass
+        count = 0
+        for item in self.songs:
+            if item.is_required == 'n':
+                count += 1
+        return count
 
     def get_number_learned(self):
         number_learnt = 0
