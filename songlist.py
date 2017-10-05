@@ -39,7 +39,8 @@ class SongList(Song):
         pass
 
     def __str__(self):
-        count = -1
-        for item in self.songs:
-            count += 1
-            return self.songs
+        a_string = ''
+        for i in range(len(self.songs)):
+            a_string = a_string + self.songs[i].__str__() + '\n'
+
+        return a_string
