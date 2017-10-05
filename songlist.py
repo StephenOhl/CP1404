@@ -21,7 +21,11 @@ class SongList(Song):
         pass
 
     def get_number_learned(self):
-        pass
+        number_learnt = 0
+        for item in self.songs:
+            if item.is_required == 'y':
+                number_learnt += 1
+        return number_learnt
 
     def load_songs(self, file_name):
         try:

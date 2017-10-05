@@ -22,6 +22,6 @@ print(song_list)
 # test get_song()
 
 # test getting the number of required and learned songs (separately)
-
+print(song_list.get_number_learned())
 # test saving songs (check CSV file manually to see results)
 song_list.save_songs("songs.csv")
