@@ -6,10 +6,7 @@ from song import Song
 
 # test empty SongList
 song_list = SongList()
-song2 = Song("Amazing Grace", "John Newton", 1779, True)
-song_list.add_song(song2)
-for i in range ( len(song_list.songs)):
-    print(song_list)
+
 #assert len(song_list.songs) == 0
 
 # test loading songs

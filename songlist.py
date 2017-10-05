@@ -13,7 +13,8 @@ class SongList(Song):
 
         return title + " not in list"
 
-    def add_song(self, a_song):
+    def add_song(self, a_song=''):
+        a_song = Song(a_song[0], a_song[1], a_song[2], a_song[3])
         self.songs.append(a_song)
 
     def get_number_required(self):
@@ -26,11 +27,11 @@ class SongList(Song):
         try:
             in_file = open(file_name, 'r')
             for line in in_file:
-                songs = line.strip('\n').split(',')
-                self.songs.append(songs)
+                a_song = line.strip('\n').split(',')
+                self.add_song(a_song)
+            in_file.close()
         except:
             print("Error - File empty no songs to load")
-        pass
 
     def save_songs(self):
         pass
@@ -42,5 +43,4 @@ class SongList(Song):
         a_string = ''
         for i in range(len(self.songs)):
             a_string = a_string + self.songs[i].__str__() + '\n'
-
         return a_string
