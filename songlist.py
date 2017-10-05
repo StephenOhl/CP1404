@@ -33,8 +33,14 @@ class SongList(Song):
         except:
             print("Error - File empty no songs to load")
 
-    def save_songs(self):
-        pass
+    def save_songs(self, file_name):
+        out_file = open(file_name, 'w')
+        try:
+            for item in self.songs:
+                print("{},{},{},{}".format(item.title, item.artist, item.year, item.is_required), file = out_file)
+        except:
+            print("stuffed up big time")
+        out_file.close()
 
     def sort_list(self):
         pass
