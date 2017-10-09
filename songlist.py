@@ -1,5 +1,6 @@
 # create your SongList class in this file
 from song import Song
+from operator import attrgetter
 
 
 class SongList(Song):
@@ -13,8 +14,9 @@ class SongList(Song):
 
         return title + " not in list"
 
-    def add_song(self, a_song=''):
-        a_song = Song(a_song[0], a_song[1], a_song[2], a_song[3])
+    def add_song(self, title, artist, year, is_required):
+        print(title)
+        a_song = Song(title, artist, year, is_required)
         self.songs.append(a_song)
 
     def get_number_required(self):
@@ -43,14 +45,12 @@ class SongList(Song):
 
     def save_songs(self, file_name):
         out_file = open(file_name, 'w')
-        try:
-            for item in self.songs:
-                print("{},{},{},{}".format(item.title, item.artist, item.year, item.is_required), file = out_file)
-        except:
-            print("stuffed up big time")
+        for item in self.songs:
+            print(item.title + ',' + item.artist + ',' + str(item.year) + ',' + item.is_required, file = out_file)
         out_file.close()
 
-    def sort_list(self):
+    def sort_list(self, sorting_key):
+        sort(key=operator.attrgetter(sorting_key, self.title))
         pass
 
     def __str__(self):

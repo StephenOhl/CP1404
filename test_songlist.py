@@ -12,14 +12,15 @@ assert len(song_list.songs) == 0
 song_list.load_songs('songs.csv')
 assert len(song_list.songs) > 0  # assuming CSV file is not empty
 print(song_list)
-#test get number of songs to learn
+# test get number of songs to learn
 print("Number of songs to learn = ", song_list.get_number_required())
 
 # TODO: add tests below to show the various required methods work as expected
 # test sorting songs
-
+#song_list.sort_list(song_list.songs[0].title)
 # test adding a new Song
-
+song_list.add_song("Here and Now,Someone,1981,n".split(','))
+print(song_list)
 # test get_song()
 
 # test getting the number of required and learned songs (separately)
