@@ -2,10 +2,10 @@
 
 
 class Song:
-    def __init__(self, artist='', title='', year=0, is_required='n'):
+    def __init__(self, title='', artist='', year=0, is_required='n'):
         self.artist = artist
         self.title = title
-        self.year = year
+        self.year = int(year)
         self.is_required = is_required
 
     def __str__(self):
