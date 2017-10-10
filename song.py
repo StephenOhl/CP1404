@@ -13,5 +13,11 @@ class Song:
         else:
             self.is_required = is_required
 
+    def set_learnt(self):
+        self.is_required = True
+
+    def set_not_learnt(self):
+        self.is_required = False
+
     def __str__(self):
-        return "{} by {} ({:4}) {}".format(self.artist, self.title, self.year, self.is_required)
+        return "\'{}\' by {} ({:4}) {}".format(self.title, self.artist, self.year, (('', '(learned)')[self.is_required]))
