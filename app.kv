@@ -1,13 +1,13 @@
 # create your Kivy layout in the kv language here
 BoxLayout:
     orientation: 'horizontal'
-    size_hint_x: 0.2
-    Label:
-        text: 'label'
-
     BoxLayout:
         orientation: 'vertical'
-        size_hint_x: 0.8
+        size_hint_x: 0.2
+        Label:
+            text: 'label'
+    BoxLayout:
+        orientation: 'vertical'
         Button:
             color: 0.5, 0.2, 1, 1
             text: ''
@@ -17,5 +17,8 @@ BoxLayout:
         Button:
             color: 0.5, 0.2, 1, 1
             text: ''
+
+
+
         Label:
             text: 'last label'
