@@ -2,7 +2,6 @@
 from song import Song
 from operator import attrgetter
 
-
 class SongList:
     def __init__(self):
         self.songs = []
@@ -49,7 +48,10 @@ class SongList:
         out_file.close()
 
     def sort_list(self, sorting_key):
-        sort(key=operator.attrgetter(sorting_key, self.title))
+        if sorting_key != "title":
+            self.songs.sort(key=attrgetter(sorting_key, "title"))
+        else:
+            self.songs.sort(key=attrgetter(sorting_key))
 
     def __str__(self):
         a_string = ''

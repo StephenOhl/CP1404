@@ -3,6 +3,7 @@
 """
 from songlist import SongList
 from song import Song
+from operator import attrgetter
 
 # test empty SongList
 song_list = SongList()
@@ -18,6 +19,8 @@ print("Number of songs to learn = ", song_list.get_number_required())
 # TODO: add tests below to show the various required methods work as expected
 # test sorting songs
 #song_list.sort_list(song_list.songs[0].title)
+song_list.sort_list("artist")
+print('\n\n', song_list)
 # test adding a new Song
 song_list.add_song("Here and Now","Someone",1981,False)
 print(song_list)
