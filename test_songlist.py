@@ -19,7 +19,7 @@ print("Number of songs to learn = ", song_list.get_number_required())
 # TODO: add tests below to show the various required methods work as expected
 # test sorting songs
 #song_list.sort_list(song_list.songs[0].title)
-song_list.sort_list("artist")
+song_list.sort_list("Required")
 print('\n\n', song_list)
 # test adding a new Song
 song_list.add_song("Here and Now","Someone",1981,False)

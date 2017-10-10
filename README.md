@@ -1,4 +1,6 @@
-# CP1404/5632 Assignment: Songs To Learn by YOURNAME
+# CP1404/5632 Assignment: Songs To Learn by Stephen Ohl
+Student id: 13499198
+github url: https://github.com/CP1404-2017-2/a2-StephenOhl.git
 
 _Edit this README, replacing this line and above with your own assignment details._  
 _At the end of the project, complete the project reflection below by answering the questions (replace the ... parts)._

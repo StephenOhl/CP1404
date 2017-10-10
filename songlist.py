@@ -48,10 +48,12 @@ class SongList:
         out_file.close()
 
     def sort_list(self, sorting_key):
+        if sorting_key == 'Required':
+            sorting_key = 'is_required'
         if sorting_key != "title":
-            self.songs.sort(key=attrgetter(sorting_key, "title"))
+            self.songs.sort(key=attrgetter(sorting_key.lower(), "title"))
         else:
-            self.songs.sort(key=attrgetter(sorting_key))
+            self.songs.sort(key=attrgetter(sorting_key.lower()))
 
     def __str__(self):
         a_string = ''
